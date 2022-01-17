@@ -1,0 +1,45 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(224, 45%, 44%);
+}
+
+body {
+  background-image: url("images/bg-desktop-light.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-family: "Josefin Sans";
+  padding: 0% 3% 10% 3%;
+}
+h1 {
+  color: #ececec;
+  margin-top: 30px;
+  text-align: left;
+}
+
+a {
+  color: white;
+}
+
+.dark {
+  background-color: hsl(235, 21%, 11%);
+  color: #e6e6e6;
+  background-image: url("images/bg-desktop-dark.jpg");
+}
+
+.icon-sun {
+  content: url("images/icon-sun.svg");
+  height: 26px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 26px;
+}
+.icon-moon {
+  content: url("images/icon-moon.svg");
+  height: 26px;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  width: 26px;
+}
