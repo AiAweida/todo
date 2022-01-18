@@ -1,25 +1,33 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
+
 <head>
   <link rel="stylesheet" href="styles.css">
   <script src="script.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <div>
   <title>Todo app</title>
 </head>
-</div>
-<div>
-<body>
-  <h1>TODO</h1>
- 
-  <input onclick=toggleTheme() id="themebtn" type="image"  class="icon-moon"  > 
- </div>
+<body  id="bContain">
+  
+  <div >
+    <header class="Container" id="hContain">
+    <h1 class="Container__Title">TODO</h1>
+    <input onclick=toggleTheme() id="themebtn" type="image" class="icon-moon">
+  
+    <div class="textInput">
+      <input type="text" id="myInput"  placeholder="create a new TODO" >
+      <ul id="uList">
+      </ul>
+    </div>
+  </header>
+  </div>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a>Adib Aweida</a>
+    
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a>Adib Aweida</a>
+    
   </div>
 </body>
 </html>
-
