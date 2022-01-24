@@ -7,15 +7,7 @@ function toggleTheme() {
   } else if (themeBtn.classList.contains("icon-moon")) {
     themeBtn.classList.replace("icon-moon", "icon-sun");
   }
-  
   const helement = document.getElementById("bContain");
   helement.classList.toggle("bContainer");
-  
-  } 
-
-function newele(){
-
-  
-
-    }
-
+}
+function newele() {}
