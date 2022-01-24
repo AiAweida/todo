@@ -1,27 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="styles.css" />
 
-<head>
-  <link rel="stylesheet" href="styles.css">
-  
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <title>Todo app</title>
-</head>
-<body  id="bContain">
-  
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Todo app</title>
+  </head>
+  <body id="bContain">
+    
     <header class="Container" id="hContain">
-    <h1 class="Container__Title">TODO</h1>
-    <div class="input">
-    <input onclick=toggleTheme() id="themebtn" type="image" class="icon-moon">
-  </div>
-</header>
-
-  <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a>Adib Aweida</a>
-  </div>
-  <script src="script.js"></script>
-</body>
+      <h1 class="Container__Title">TODO</h1>
+      <div class="Input">
+        <input onclick="toggleTheme()" id="themebtn" type="image" class="Icon-Moon"/>
+      </div> 
+     
+    </header>
+    <main class="Container__Text">
+      <input type="text" id="myInput" placeholder="new TODO">
+      <span onclick="newElement()" class="addBtn">Add</span>
+    </main>
+    <div class="Attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a >. Coded by <a>Adib Aweida</a>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
