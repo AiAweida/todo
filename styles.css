@@ -1,36 +1,32 @@
 body {
   margin:0;
+  font-family: 'Josefin Sans';
+  
 }
 /*first calss is made for the header container*/
-.Container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.Body-Layout {
+  
   padding: 5% 3% 10% 3%;
   background-image: url("images/bg-mobile-light.jpg");
   background-size: 100% 100%;
  
   background-repeat: no-repeat;
 }
+.Container__Header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 /*title*/
-.Container__Title {
+.Header-Title {
   color: #ffffff;
-}
-/*footer*/
-.Attribution {
-  font-size: 11px;
-  text-align: center;
-}
-.Attribution a {
-  color: hsl(224, 45%, 44%);
 }
 /*them toggle for colors and images*/
 .Dark{
   background-color: hsl(235, 21%, 11%);
   color: #e6e6e6;
 }
-.Dark .Container{
-  
+.Dark .Header-Layout{
   background-image: url("images/bg-mobile-dark.jpg");
   background-repeat: no-repeat;
 }
@@ -48,24 +44,22 @@ body {
   width: 26px;
 }
 
-.Dark Input[id="myInput"] {
+.Dark .Input-Layput[id="myInput"] {
   background-color: #25273c;
   color: white;
 }
-.Container__Text {
+.Input-Layout {
   display: flex;
-  flex-direction: column;
-  justify-items: center;
   align-items: center;
   flex-flow: column nowrap;
 }
 
 /* a query for desktop*/
 @media screen and (min-width: 1024px) {
-.Dark .Container {
+.Dark .Body-Layout {
   background-image: url("images/bg-desktop-dark.jpg");
 }
-  .Container{
+  .Body-Layout{
     background-image: url("images/bg-desktop-light.jpg");
   }
 }
