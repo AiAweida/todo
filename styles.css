@@ -4,7 +4,7 @@ body {
   
 }
 /*first calss is made for the header container*/
-.Body-Layout {
+.Body__Container {
   
   padding: 5% 3% 10% 3%;
   background-image: url("images/bg-mobile-light.jpg");
@@ -18,7 +18,7 @@ body {
   align-items: center;
 }
 /*title*/
-.Header-Title {
+.Header__Title {
   color: #ffffff;
 }
 /*them toggle for colors and images*/
@@ -26,7 +26,7 @@ body {
   background-color: hsl(235, 21%, 11%);
   color: #e6e6e6;
 }
-.Dark .Header-Layout{
+.Dark .Header__Layout{
   background-image: url("images/bg-mobile-dark.jpg");
   background-repeat: no-repeat;
 }
@@ -44,11 +44,11 @@ body {
   width: 26px;
 }
 
-.Dark .Input-Layput[id="myInput"] {
+.Dark .Input__Layput[id="myInput"] {
   background-color: #25273c;
   color: white;
 }
-.Input-Layout {
+.Input__Layout {
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
@@ -56,10 +56,10 @@ body {
 
 /* a query for desktop*/
 @media screen and (min-width: 1024px) {
-.Dark .Body-Layout {
+.Dark .Body__Container {
   background-image: url("images/bg-desktop-dark.jpg");
 }
-  .Body-Layout{
+  .Body__Container{
     background-image: url("images/bg-desktop-light.jpg");
   }
 }
