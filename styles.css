@@ -1,116 +1,65 @@
-.bContainer {
-  background-color: #181824;
-  color: white;
+body {
+  margin:0;
+  font-family: 'Josefin Sans';
+  
 }
-.Container {
-  background-image: url("images/bg-desktop-light.jpg");
+/*first calss is made for the header container*/
+.Body__Container {
+  
+  padding: 5% 3% 10% 3%;
+  background-image: url("images/bg-mobile-light.jpg");
   background-size: 100% 100%;
-
+ 
   background-repeat: no-repeat;
-  font-family: "Josefin Sans";
-  padding: 0% 3% 10% 3%;
 }
-.Container__header {
-  flex-direction: row;
+.Container__Header {
   display: flex;
-  justify-items: center;
+  justify-content: space-around;
+  align-items: center;
 }
-
-.Container__Title {
+/*title*/
+.Header__Title {
   color: #ffffff;
-  /*position: absolute; right: 1200px; top: -20px;*/
-  flex-direction: row;
-  display: flex;
-  justify-items: center;
 }
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: hsl(224, 45%, 44%);
-}
-
-.dark {
+/*them toggle for colors and images*/
+.Dark{
   background-color: hsl(235, 21%, 11%);
   color: #e6e6e6;
-  background-image: url("images/bg-desktop-dark.jpg");
+}
+.Dark .Header__Layout{
+  background-image: url("images/bg-mobile-dark.jpg");
   background-repeat: no-repeat;
 }
-
-.icon-sun {
-  flex-direction: row;
-  display: flex;
-  justify-items: center;
-
+/*theme toggle for button*/
+.Icon-Sun {
   content: url("images/icon-sun.svg");
   height: 26px;
   background-repeat: no-repeat;
-  margin: 0 auto;
   width: 26px;
-}
-.icon-moon {
-  flex-direction: row;
-  display: flex;
-  justify-items: center;
-
+}/*theme toggle for button*/
+.Icon-Moon {
   content: url("images/icon-moon.svg");
   height: 26px;
   background-repeat: no-repeat;
-  margin: 0 auto;
   width: 26px;
 }
 
-input[id="myInput"] {
-  margin: 10;
-  margin: 10;
-
-  flex-direction: row;
-  display: flex;
-  justify-items: center;
-
-  align-items: center;
-}
-
-.dark input[id="myInput"] {
+.Dark .Input__Layput[id="myInput"] {
   background-color: #25273c;
   color: white;
-  flex-direction: row;
+}
+.Input__Layout {
   display: flex;
-  justify-items: center;
-  align-items: stretch;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  align-items: center;
+  flex-flow: column nowrap;
 }
 
-/*
-input[id='myInput'] textarea {
-background-color: black;
-color: white;
+/* a query for desktop*/
+@media screen and (min-width: 1024px) {
+.Dark .Body__Container {
+  background-image: url("images/bg-desktop-dark.jpg");
 }
-input[id='myInput'], textarea .tLight{
-  color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255);
-  position: absolute; right: 850px; top: 50px;
-
-margin: auto;
-
-
-  } 
-  .tdTable span{s
-position: absolute; right: 850px; top: 50px;
-width: 150px;
-height: 30px;
-margin: auto;
-border-top-width: 5px;
-    border-right-width: 5px;
-    border-bottom-width: 5px;
-    border-left-width: 5px;
-    size: 15px;
- 
-}*/
+  .Body__Container{
+    background-image: url("images/bg-desktop-light.jpg");
+  }
+}
