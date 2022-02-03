@@ -1,5 +1,5 @@
 function toggleTheme() {
-
+  
   const themeBtn = document.getElementById("themebtn");
   if (themeBtn.classList.contains("Icon-Sun")) {
     themeBtn.classList.replace("Icon-Sun", "Icon-Moon");
@@ -10,19 +10,26 @@ function toggleTheme() {
   helement.classList.toggle("Dark");
   const ielement = document.getElementById("myInput");
   ielement.classList.toggle("Dark")
+  const btnadd = document.getElementById("AddBtn");
+  btnadd.classList.toggle("Dark");
+  
 }
 
 function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
+  const li = document.createElement("li");
+  const inputValue = document.getElementById("myInput").value;
+  const t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue =='') {
     alert("please fill the text box with letters ");
   } else {
     document.getElementById("Todo").appendChild(li);
   }
-  document.getElementById("myInput").value = "";
+  
+  
+  
+  
+  /*document.getElementById("myInput").value = "";
 
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -35,5 +42,5 @@ function newElement() {
       var div = this.parentElement;
       div.style.display = "none";
     }
-  }
+  }*/
 }

@@ -14,7 +14,7 @@ body {
 }
 .Container__Header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly ;
   align-items: center;
 }
 /*title*/
@@ -26,7 +26,7 @@ body {
   background-color: hsl(235, 21%, 11%);
   color: #e6e6e6;
 }
-.Dark .Header__Layout{
+.Dark .Body__Container{
   background-image: url("images/bg-mobile-dark.jpg");
   background-repeat: no-repeat;
 }
@@ -46,12 +46,13 @@ body {
 
 .Dark .Input__Layput[id="myInput"] {
   background-color: #25273c;
-  color: white;
+  border: transparent;
 }
-.Input__Layout {
-  display: flex;
-  align-items: center;
-  flex-flow: row nowrap;
+.Input__Layout {  
+  width: 38%;
+  padding: 10px;
+  font-size: 16px;
+  outline-color:transparent ;
 }
 
 .List__Layout {
@@ -62,35 +63,39 @@ body {
 
 .List__Layout li {
   cursor: pointer;
-  justify-content: center;
+  padding: 26px 26px 26px 26px;
   color: #3c2525;
   background: rgb(32, 15, 131);
   font-size: 18px;
   transition: 0.2s;
 }
 /* Style the input */
-.Input__Layoutut {
-  margin: 0;
-  border: none;
-  border-radius: 0;
-  width: 75%;
-  padding: 10px;
-  float: left;
-  font-size: 16px;
-}
+
 
 /* Style the "Add" button */
 .Add__Button {
-  background: #d9d9d9;
-  color: #555;
-  float: left;
-  text-align: center;
-  font-size: 16px;
+  background: white;
   cursor: pointer;
-  transition: 0.3s;
-  border-radius: 0;
-  content: url("images/icon-cross.svg");
+  border-radius: 50px;
+  height: 26px;
+  width: 26px;
 }
+.Dark .Add__Button{
+  background-color: #25273c;
+}
+.Add__Button:hover{
+  background:linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  content:url("images/icon-check.svg");
+
+}
+
+.Todo__Layout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 
 .Add__Button:hover {
   background-color: #bbb;
