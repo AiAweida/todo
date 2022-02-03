@@ -83,10 +83,10 @@ body {
 .Dark .Add__Button{
   background-color: #25273c;
 }
-.Add__Button:hover{
-  background:linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-  content:url("images/icon-check.svg");
 
+.Add__Button:active{
+  background:linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    content:url("images/icon-check.svg");
 }
 
 .Todo__Layout{
@@ -108,5 +108,9 @@ body {
 }
   .Body__Container{
     background-image: url("images/bg-desktop-light.jpg");
+  }
+  .Add__Button:hover{
+    background:linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    content:url("images/icon-check.svg");
   }
 }
