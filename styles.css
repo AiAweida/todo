@@ -1,7 +1,8 @@
 body {
+  box-sizing: border-box;
   margin:0;
   font-family: 'Josefin Sans';
-  background-color: #fafafa;
+  background-color: #f1f0f4;
 }
 /*first calss is made for the header container*/
 .Body__Container {
@@ -85,14 +86,17 @@ body {
 
 /* Style the "Add" button */
 .Add__Button {
-  background: white;
   cursor: pointer;
   border-radius: 50px;
   height: 26px;
   width: 26px;
+  position: absolute;
+  border-color: #f1f0f4;
+  border-style: solid;
 }
 .Dark .Add__Button{
   background-color: #25273c;
+  border-color: #2f3146;
 }
 
 .Add__Button:active{
@@ -107,11 +111,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-
-.Add__Button:hover {
-  background-color: #bbb;
+  
 }
 
 /* a query for desktop*/
