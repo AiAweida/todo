@@ -9,9 +9,11 @@ function toggleTheme() {
   const helement = document.getElementById("bContain");
   helement.classList.toggle("Dark");
 }
+
 function newElement() {
   const li = document.createElement("li");
   li.className = ("Li_Layout");
+  li.id=("ListItem")
   const inputValue = document.getElementById("myInput").value;
   const t = document.createTextNode(inputValue);
   li.appendChild(t);
@@ -21,4 +23,24 @@ function newElement() {
     document.getElementById("UnList").appendChild(li);
   }
   document.getElementById("myInput").value = "";
+
+  let del=document.createElement("span");
+  
+  del.className=("Del__Btn");
+  li.appendChild(del);
+ let dx=document.getElementsByClassName("Del__Btn");
+ let i;
+  for(i=0;i < dx.length;i++){
+  dx[i].onclick = function(){
+    let dx=this.parentElement;
+    dx.style.display="none";
+  }
+  }
+  let Chk=document.createElement("span");
+  
+  Chk.className=("Chk__Btn");
+  li.appendChild(Chk);
+ let cx=document.getElementsByClassName("Chk__Btn");
+ cx=this.parentElement;
 }
+  

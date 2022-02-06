@@ -76,17 +76,12 @@ body {
   font-size: 18px;
   transition: 0.2s;
   word-wrap: break-word;
-  padding-left: 3px;
+  padding-left: 36px;
   margin-bottom: 3px;
 }
 .Dark .Li_Layout{
   color: #ffffff;
   background-color: #25273c;
-}
-.CloseBtn{
-  position: absolute;
-  
-  content: url("images/icon-cross.svg");
 }
 /* Style the "Add" button */
 .Add__Button {
@@ -123,6 +118,29 @@ body {
   margin-inline: auto;
   align-items: center;
   flex-direction: column;
+}
+.Del__Btn{
+  content: url("images/icon-cross.svg");
+  position: absolute;
+  right: 5px;
+}
+.Chk__Btn{
+  cursor: pointer;
+  border-radius: 50px;
+  height: 26px;
+  width: 26px;
+  position: absolute;
+  border-color: #f1f0f4;
+  border-style: solid;
+  left:3px;
+  image-rendering: pixelated;
+  align-self: center;
+
+}
+.Chk__Btn:checked{
+  background:linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+    content:url("images/icon-check.svg");
+    align-content: center;
 }
 /* a query for desktop*/
 @media screen and (min-width: 1024px) {
