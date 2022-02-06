@@ -73,6 +73,7 @@ body {
   background: #ffffff;
   font-size: 18px;
   transition: 0.2s;
+  word-wrap: break-word;
 }
 .Dark .Li_Layout{
   color: #ffffff;
