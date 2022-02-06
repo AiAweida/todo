@@ -1,7 +1,7 @@
 body {
   margin:0;
   font-family: 'Josefin Sans';
-  
+  background-color: #fafafa;
 }
 /*first calss is made for the header container*/
 .Body__Container {
@@ -23,7 +23,7 @@ body {
 }
 /*them toggle for colors and images*/
 .Dark{
-  background-color: hsl(235, 21%, 11%);
+  background-color: #181824;
   color: #e6e6e6;
 }
 .Dark .Body__Container{
@@ -54,23 +54,34 @@ body {
   font-size: 16px;
   outline-color:transparent ;
 }
+.Dark .Input__Layout{
+  background-color: #25273c;
+}
 
 .List__Layout {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
-
-.List__Layout li {
+/* Style the input */
+.Li_Layout {
   cursor: pointer;
   padding: 26px 26px 26px 26px;
-  color: #3c2525;
-  background: rgb(32, 15, 131);
+  color: black;
+  background: #ffffff;
   font-size: 18px;
   transition: 0.2s;
 }
-/* Style the input */
-
+.Dark .Li_Layout{
+  color: #ffffff;
+  background-color: #25273c;
+}
+.CloseBtn{
+  position: absolute;
+  
+  content: url("images/icon-cross.svg");
+}
 
 /* Style the "Add" button */
 .Add__Button {
@@ -87,6 +98,8 @@ body {
 .Add__Button:active{
   background:linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     content:url("images/icon-check.svg");
+    align-content: center;
+    
 }
 
 .Todo__Layout{
@@ -112,5 +125,6 @@ body {
   .Add__Button:hover{
     background:linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     content:url("images/icon-check.svg");
-  }
+   };
+
 }
