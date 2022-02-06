@@ -6,11 +6,9 @@ body {
 }
 /*first calss is made for the header container*/
 .Body__Container {
-  
-  padding: 5% 3% 10% 3%;
+  padding: 3% 3% 3% 3%;
   background-image: url("images/bg-mobile-light.jpg");
   background-size: 100% 100%;
- 
   background-repeat: no-repeat;
 }
 .Container__Header {
@@ -37,34 +35,38 @@ body {
   height: 26px;
   background-repeat: no-repeat;
   width: 26px;
-}/*theme toggle for button*/
+}
+/*theme toggle for button*/
 .Icon-Moon {
   content: url("images/icon-moon.svg");
   height: 26px;
   background-repeat: no-repeat;
   width: 26px;
 }
-
 .Dark .Input__Layput[id="myInput"] {
   background-color: #25273c;
   border: transparent;
 }
 .Input__Layout {  
-  width: 38%;
-  padding: 10px;
+  padding: 20px;
   font-size: 16px;
   outline-color:transparent ;
+  padding-left: 34px;
+  width: 100%;
+  align-self: center;
 }
 .Dark .Input__Layout{
   background-color: #25273c;
+  color:white;
 }
-
 .List__Layout {
-  margin: 0;
-  padding: 0;
+  width: 40%;
+  position: absolute;
   list-style-type: none;
+  padding-bottom: 5em;
+  border-bottom: 25px;
+  padding: 0%;
 }
-
 /* Style the input */
 .Li_Layout {
   cursor: pointer;
@@ -74,6 +76,8 @@ body {
   font-size: 18px;
   transition: 0.2s;
   word-wrap: break-word;
+  padding-left: 3px;
+  margin-bottom: 3px;
 }
 .Dark .Li_Layout{
   color: #ffffff;
@@ -84,7 +88,6 @@ body {
   
   content: url("images/icon-cross.svg");
 }
-
 /* Style the "Add" button */
 .Add__Button {
   cursor: pointer;
@@ -94,27 +97,33 @@ body {
   position: absolute;
   border-color: #f1f0f4;
   border-style: solid;
+  left:3px;
+  image-rendering: pixelated;
+  align-self: center;
+ 
 }
 .Dark .Add__Button{
   background-color: #25273c;
   border-color: #2f3146;
 }
-
 .Add__Button:active{
   background:linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     content:url("images/icon-check.svg");
     align-content: center;
-    
 }
-
 .Todo__Layout{
   display: flex;
-  justify-content: center;
+  position: relative;
+  width: 40%;
+  margin-inline: auto;
+}
+.Unl__Layout{
+  display: flex;
+  position: relative;
+  margin-inline: auto;
   align-items: center;
   flex-direction: column;
-  
 }
-
 /* a query for desktop*/
 @media screen and (min-width: 1024px) {
 .Dark .Body__Container {
@@ -126,6 +135,9 @@ body {
   .Add__Button:hover{
     background:linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
     content:url("images/icon-check.svg");
-   };
+   }
+   .Add__Button:checked{
+     border-color: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+   }
 
 }
