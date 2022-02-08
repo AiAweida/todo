@@ -40,3 +40,7 @@ mn.addEventListener("click", (event) => {
   event.target.classList.toggle("Sun");
   bl.classList.toggle("Dark");
 });
+function clearlist() {
+  var myList = document.getElementById("UnList");
+  myList.innerHTML = "";
+}
