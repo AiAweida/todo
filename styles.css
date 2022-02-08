@@ -19,6 +19,7 @@ body {
 /*title*/
 .Header__Title {
   color: #ffffff;
+  letter-spacing: 16px;
 }
 /*them toggle for colors and images*/
 .Dark {
@@ -64,24 +65,20 @@ body {
   width: 40%;
   position: absolute;
   list-style-type: none;
-  padding-bottom: 5em;
-  border-bottom: 25px;
   padding: 0%;
 }
 /* Style the input */
 .Li_Layout {
-  cursor: pointer;
   padding: 26px 26px 26px 26px;
-  color: black;
+  /* color: black;*/
   background: #ffffff;
   font-size: 18px;
-  transition: 0.2s;
-  word-wrap: break-word;
   padding-left: 36px;
   margin-bottom: 3px;
-  align-items: center;
-  align-content: center;
-  white-space: nowrap;
+  user-select: none;
+}
+.lined {
+  text-decoration: line-through;
 }
 .Dark .Li_Layout {
   color: #ffffff;
@@ -106,7 +103,7 @@ body {
 }
 .Add__Button:active {
   background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-  background: center url("images/icon-check.svg");
+  content: url("images/icon-check.svg");
   align-content: center;
 }
 .Todo__Layout {
@@ -126,9 +123,9 @@ body {
   content: url("images/icon-cross.svg");
   position: absolute;
   right: 5px;
+  cursor: pointer;
 }
 .Chk__Btn {
-  cursor: pointer;
   border-radius: 50px;
   height: 20px;
   width: 20px;
@@ -137,16 +134,14 @@ body {
   border-style: solid;
   left: 3px;
   align-self: center;
+  cursor: pointer;
 }
-.Chk__Btn:checked {
-  background-color: linear-gradient(
-    135deg,
-    hsl(192, 100%, 67%),
-    hsl(280, 87%, 65%)
-  );
+.Dark .Chk__Btn {
+  border-color: #2f3146;
+}
+.clicked {
   content: url("images/icon-check.svg");
-  align-content: center;
-  text-decoration: line-through;
+  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 
 /* a query for desktop*/
