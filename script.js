@@ -1,13 +1,3 @@
-const mn = document.getElementById("themebtn");
-mn.addEventListener("click", (event) => {
-  event.target.classList.toggle("Sun");
-});
-
-function toggleTheme() {
-  const helement = document.getElementById("bContain");
-  helement.classList.toggle("Dark");
-}
-
 function newElement() {
   const li = document.createElement("li");
   li.className = "Li_Layout";
@@ -43,4 +33,10 @@ kp.addEventListener("keypress", (event) => {
   if (event.keyCode === 13) {
     newElement();
   }
+});
+const mn = document.getElementById("themebtn");
+const bl = document.getElementById("bContain");
+mn.addEventListener("click", (event) => {
+  event.target.classList.toggle("Sun");
+  bl.classList.toggle("Dark");
 });
