@@ -1,5 +1,4 @@
 function toggleTheme() {
-
   const themeBtn = document.getElementById("themebtn");
   if (themeBtn.classList.contains("Icon-Sun")) {
     themeBtn.classList.replace("Icon-Sun", "Icon-Moon");
@@ -12,35 +11,30 @@ function toggleTheme() {
 
 function newElement() {
   const li = document.createElement("li");
-  li.className = ("Li_Layout");
-  li.id=("ListItem")
+  li.className = "Li_Layout";
+  li.id = "ListItem";
   const inputValue = document.getElementById("myInput").value;
   const t = document.createTextNode(inputValue);
   li.appendChild(t);
-  if (inputValue == '') {
+  if (inputValue === "") {
     alert("please fill the text box with letters ");
   } else {
     document.getElementById("UnList").appendChild(li);
+    const del = document.createElement("span");
+    del.className = "Del__Btn";
+    li.appendChild(del);
+    del.addEventListener("click", deleteItem);
+    let Chk = document.createElement("input");
+    Chk.type = "checkbox";
+    Chk.className = "Chk__Btn";
+    Chk.id = "hkBtn";
+    Chk.addEventListener("click", checkItem);
+    li.appendChild(Chk);
   }
-  document.getElementById("myInput").value = "";
-
-  let del=document.createElement("span");
-  
-  del.className=("Del__Btn");
-  li.appendChild(del);
- let dx=document.getElementsByClassName("Del__Btn");
- let i;
-  for(i=0;i < dx.length;i++){
-  dx[i].onclick = function(){
-    let dx=this.parentElement;
-    dx.style.display="none";
-  }
-  }
-  let Chk=document.createElement("span");
-  
-  Chk.className=("Chk__Btn");
-  li.appendChild(Chk);
- let cx=document.getElementsByClassName("Chk__Btn");
- cx=this.parentElement;
+  document.getElementById("UnList").value = "";
 }
-  
+
+function deleteItem(event) {
+  event.target.parentElement.remove();
+}
+function checkItem(event) {}
