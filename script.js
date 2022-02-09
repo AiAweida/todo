@@ -1,9 +1,11 @@
+var regx = /^([a-zA-Z]|[0-9]|[a-z0-9])+$/gi;
 function newElement() {
   const itemlist = document.createElement("li");
   itemlist.className = "Li_Layout";
   itemlist.id = "ListItem";
-  const inputValue = document.getElementById("todoList").value.trim();
-  const textinput = document.createTextNode(inputValue);
+  let inputValue = document.getElementById("todoList").value.trim();
+  let textinput = document.createTextNode(inputValue);
+  inputValue = inputValue.replace(regx, "");
   itemlist.appendChild(textinput);
   if (inputValue === "") {
     alert("please fill the text box with letters ");
@@ -48,14 +50,10 @@ clearcompleted.addEventListener("click", (event) => {
     completeditems.item(0).remove();
   }
 });
-let clicked = false;
-document.getElementById("checkedButton").addEventListener("click", function () {
-  clicked = true;
-});
-if ((clicked = false)) {
-  function checklist(event) {
+
+function checklist(event) {
+  if (event.target.id == "ListItem") {
     event.target.classList.toggle("lined");
     event.target.childNodes[2].classList.toggle("clicked");
   }
-} else {
 }
