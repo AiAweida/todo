@@ -13,9 +13,10 @@ body {
 }
 .Container__Header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   user-select: none;
+  width: 95%;
 }
 /*title*/
 .Header__Title {
@@ -42,7 +43,7 @@ body {
 .Sun {
   content: url("images/icon-sun.svg");
 }
-.Dark .Input__Layput[id="myInput"] {
+.Dark .Input__Layput[id="todoList"] {
   background-color: #25273c;
   border: transparent;
 }
@@ -60,7 +61,7 @@ body {
   color: white;
 }
 .List__Layout {
-  width: 40%;
+  width: 90%;
   position: absolute;
   list-style-type: none;
   padding: 0%;
@@ -107,7 +108,7 @@ body {
 .Todo__Layout {
   display: flex;
   position: relative;
-  width: 40%;
+  width: 90%;
   margin-inline: auto;
 }
 .Unl__Layout {
@@ -117,13 +118,13 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.Del__Btn {
+.Delete__Btn {
   content: url("images/icon-cross.svg");
   position: absolute;
   right: 5px;
   cursor: pointer;
 }
-.Chk__Btn {
+.Check__Btn {
   border-radius: 50px;
   height: 20px;
   width: 20px;
@@ -135,14 +136,14 @@ body {
   cursor: pointer;
 }
 
-.Dark .Chk__Btn {
+.Dark .Check__Btn {
   border-color: #2f3146;
 }
 .clicked {
   content: url("images/icon-check.svg");
   background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
-.Chk__Btn:hover {
+.Check__Btn:hover {
   content: url("images/icon-check.svg");
   background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
@@ -174,5 +175,15 @@ body {
       hsl(280, 87%, 65%)
     );
     content: url("images/icon-check.svg");
+  }
+  .Container__Header {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+  .Todo__Layout {
+    width: 40%;
+  }
+  .List__Layout {
+    width: 40%;
   }
 }

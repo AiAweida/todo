@@ -1,24 +1,24 @@
 function newElement() {
-  const li = document.createElement("li");
-  li.className = "Li_Layout";
-  li.id = "ListItem";
-  const inputValue = document.getElementById("myInput").value.trim();
+  const itemlist = document.createElement("li");
+  itemlist.className = "Li_Layout";
+  itemlist.id = "ListItem";
+  const inputValue = document.getElementById("todoList").value.trim();
   const txt = document.createTextNode(inputValue);
-  li.appendChild(txt);
+  itemlist.appendChild(txt);
   if (inputValue === "") {
     alert("please fill the text box with letters ");
   } else {
-    document.getElementById("UnList").appendChild(li);
-    const del = document.createElement("span");
-    del.className = "Del__Btn";
-    li.appendChild(del);
-    del.addEventListener("click", deleteItem);
-    let Chk = document.createElement("span");
-    Chk.className = "Chk__Btn";
-    li.appendChild(Chk);
-    Chk.addEventListener("click", checkItem);
+    document.getElementById("unorderedList").appendChild(itemlist);
+    const deleted = document.createElement("span");
+    deleted.className = "Delete__Btn";
+    itemlist.appendChild(deleted);
+    deleted.addEventListener("click", deleteItem);
+    let Checked = document.createElement("span");
+    Checked.className = "Check__Btn";
+    itemlist.appendChild(Checked);
+    Checked.addEventListener("click", checkItem);
   }
-  document.getElementById("myInput").value = "";
+  document.getElementById("todoList").value = "";
 }
 
 function deleteItem(event) {
@@ -27,20 +27,28 @@ function deleteItem(event) {
 function checkItem(event) {
   event.target.parentElement.classList.toggle("lined");
   event.target.classList.toggle("clicked");
+  if (event.target.parentElement.id == "checked") {
+    event.target.parentElement.id = "ListItem";
+  } else {
+    event.target.parentElement.id = "checked";
+  }
 }
-const kp = document.getElementById("myInput");
-kp.addEventListener("keypress", (event) => {
+const keypressed = document.getElementById("todoList");
+keypressed.addEventListener("keypress", (event) => {
   if (event.keyCode === 13) {
     newElement();
   }
 });
-const mn = document.getElementById("themebtn");
-const bl = document.getElementById("bContain");
-mn.addEventListener("click", (event) => {
+const mouseclick = document.getElementById("themebtn");
+const bodylayout = document.getElementById("bContain");
+mouseclick.addEventListener("click", (event) => {
   event.target.classList.toggle("Sun");
-  bl.classList.toggle("Dark");
+  bodylayout.classList.toggle("Dark");
 });
-function clearlist() {
-  var myList = document.getElementById("UnList");
-  myList.innerHTML = "";
-}
+const clearcompleted = document.getElementById("clearButton");
+clearcompleted.addEventListener("click", (event) => {
+  let completeditems = document.getElementsByClassName("lined");
+  while (completeditems.length > 0) {
+    completeditems.item(0).remove();
+  }
+});
