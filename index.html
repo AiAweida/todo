@@ -7,6 +7,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <script defer src="script.js"></script>
   <title>Todo app</title>
 </head>
 
@@ -23,18 +24,20 @@
     <main>
       <div id="Todo" class="Todo__Layout">
         <input type="text" id="todoList" placeholder="Write A Todo" class="Input__Layout">
-        <span onclick="newElement()" class="Add__Button" type="image" id="AddBtn"></span></input>
+        <span onclick="newElement()" class="Add__Button"  id="AddBtn"></span></input>
       </div>
       <div class="Unl__Layout" >
       <ul id="unorderedList" class="List__Layout">
       </ul>
+      </div>
       <div class="utilBtn">
+        <label>
         <span  class ="clearBtn" id="clearButton">clearcompleted</span>
-      
+      </label>
     </div>
 </main>
   </div>
-  <script src="script.js"></script>
+
 </body>
 
 </html>

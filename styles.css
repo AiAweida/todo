@@ -34,14 +34,15 @@ body {
 }
 
 .Icon-Moon {
-  content: url("images/icon-moon.svg");
+  background: url("images/icon-moon.svg") no-repeat;
   height: 26px;
   background-repeat: no-repeat;
   width: 26px;
+  display: block;
   cursor: pointer;
 }
 .Sun {
-  content: url("images/icon-sun.svg");
+  background: url("images/icon-sun.svg") no-repeat;
 }
 .Dark .Input__Layput[id="todoList"] {
   background-color: #25273c;
@@ -79,6 +80,7 @@ body {
 }
 .lined {
   text-decoration: line-through;
+  color: grey;
 }
 .Dark .Li_Layout {
   color: #ffffff;
@@ -101,9 +103,8 @@ body {
   border-color: #2f3146;
 }
 .Add__Button:active {
-  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
-  content: url("images/icon-check.svg");
-  align-content: center;
+  background: center url("images/icon-check.svg") no-repeat,
+    linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 .Todo__Layout {
   display: flex;
@@ -119,11 +120,14 @@ body {
   flex-direction: column;
 }
 .Delete__Btn {
-  content: url("images/icon-cross.svg");
+  background: url("images/icon-cross.svg") no-repeat;
   position: absolute;
   right: 5px;
+  width: 18px;
+  height: 18px;
   cursor: pointer;
 }
+
 .Check__Btn {
   border-radius: 50px;
   height: 20px;
@@ -140,24 +144,25 @@ body {
   border-color: #2f3146;
 }
 .clicked {
-  content: url("images/icon-check.svg");
-  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background: center url("images/icon-check.svg") no-repeat,
+    linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 .Check__Btn:hover {
-  content: url("images/icon-check.svg");
-  background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  background: center url("images/icon-check.svg") no-repeat,
+    linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 .utilBtn {
-  position: absolute;
-  align-self: center;
-  align-items: center;
+  align-items: baseline;
+  display: flex;
+  flex-flow: row nowrap;
 }
 .clearBtn {
-  position: relative;
-  cursor: pointer;
-  border: none;
   background-color: inherit;
-  display: inline-block;
+  cursor: pointer;
+}
+.Dark .Li_Layout.lined {
+  text-decoration: line-through;
+  color: grey;
 }
 
 /* a query for desktop*/
@@ -169,12 +174,8 @@ body {
     background-image: url("images/bg-desktop-light.jpg");
   }
   .Add__Button:hover {
-    background: linear-gradient(
-      135deg,
-      hsl(192, 100%, 67%),
-      hsl(280, 87%, 65%)
-    );
-    content: url("images/icon-check.svg");
+    background: center url("images/icon-check.svg") no-repeat,
+      linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
   }
   .Container__Header {
     width: 100%;
@@ -185,5 +186,11 @@ body {
   }
   .List__Layout {
     width: 40%;
+  }
+  .Delete__Btn {
+    display: none;
+  }
+  .Li_Layout:hover .Delete__Btn {
+    display: inline;
   }
 }

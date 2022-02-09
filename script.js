@@ -3,8 +3,8 @@ function newElement() {
   itemlist.className = "Li_Layout";
   itemlist.id = "ListItem";
   const inputValue = document.getElementById("todoList").value.trim();
-  const txt = document.createTextNode(inputValue);
-  itemlist.appendChild(txt);
+  const textinput = document.createTextNode(inputValue);
+  itemlist.appendChild(textinput);
   if (inputValue === "") {
     alert("please fill the text box with letters ");
   } else {
@@ -13,25 +13,21 @@ function newElement() {
     deleted.className = "Delete__Btn";
     itemlist.appendChild(deleted);
     deleted.addEventListener("click", deleteItem);
-    let Checked = document.createElement("span");
+    const Checked = document.createElement("span");
     Checked.className = "Check__Btn";
+    Checked.id = "checkedButton";
     itemlist.appendChild(Checked);
     Checked.addEventListener("click", checkItem);
+    itemlist.addEventListener("click", checklist);
   }
   document.getElementById("todoList").value = "";
 }
-
 function deleteItem(event) {
   event.target.parentElement.remove();
 }
 function checkItem(event) {
   event.target.parentElement.classList.toggle("lined");
   event.target.classList.toggle("clicked");
-  if (event.target.parentElement.id == "checked") {
-    event.target.parentElement.id = "ListItem";
-  } else {
-    event.target.parentElement.id = "checked";
-  }
 }
 const keypressed = document.getElementById("todoList");
 keypressed.addEventListener("keypress", (event) => {
@@ -52,3 +48,14 @@ clearcompleted.addEventListener("click", (event) => {
     completeditems.item(0).remove();
   }
 });
+let clicked = false;
+document.getElementById("checkedButton").addEventListener("click", function () {
+  clicked = true;
+});
+if ((clicked = false)) {
+  function checklist(event) {
+    event.target.classList.toggle("lined");
+    event.target.childNodes[2].classList.toggle("clicked");
+  }
+} else {
+}
