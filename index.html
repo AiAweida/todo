@@ -11,8 +11,8 @@
   <title>Todo app</title>
 </head>
 
-<body id="bContain">
-  <div class="Body__Container">
+<body id="bContain" class="Body__Container">
+  <!-- <div class="Body__Container"> -->
     <header class="Container__Header" id="hContain">
       <h1 class="Header__Title">TODO</h1>
         <span id="themebtn" class="Icon-Moon"></span>
@@ -23,16 +23,17 @@
         <span onclick="newElement()" class="Add__Button"  id="AddBtn"></span></input>
       </div>
       <div class="Unl__Layout" >
-      <ul id="unorderedList" class="List__Layout">
-      </ul>
+      <ul id="unorderedList" class="List__Layout"></ul>
+      <div class="utilBtn">  
+        <label class="cursor"><input type="radio" name="radio" class ="hidden"id="All"/>All</label>
+        <label class="cursor"><input type="radio" name="radio" class="hidden" id="Active"/>Active</label>
+        <label class="cursor"><input type="radio" name="radio" class="hidden" id="completed"/>completed</label>
+        <label><span class ="clearBtn" id="clearButton">clearcompleted</span></label>
       </div>
-      <div class="utilBtn">
-        <label>
-        <span  class ="clearBtn" id="clearButton">clearcompleted</span>
-      </label>
     </div>
+   
 </main>
-  </div>
+  <!-- </div> -->
 
 </body>
 
