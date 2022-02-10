@@ -4,10 +4,10 @@
 <head>
   <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet' />
   <link rel="stylesheet" href="styles.css" />
-  <script src="script.js"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <script defer src="script.js"></script>
   <title>Todo app</title>
 </head>
 
@@ -15,18 +15,28 @@
   <div class="Body__Container">
     <header class="Container__Header" id="hContain">
       <h1 class="Header__Title">TODO</h1>
-      <div class="Input__Container">
-        <input onclick="toggleTheme()" id="themebtn" type="image" class="Icon-Moon" />
+      <div>
+        <span id="themebtn" class="Icon-Moon"></span>
       </div>
 
     </header>
 
-    <main class="Input__Layout">
-      <input type="text" id="myInput" placeholder="new TODO">
-      <span onclick="newElement()" class="addBtn">Add</span>
-    </main>
+    <main>
+      <div id="Todo" class="Todo__Layout">
+        <input type="text" id="todoList" placeholder="Write A Todo" class="Input__Layout">
+        <span onclick="newElement()" class="Add__Button"  id="AddBtn"></span></input>
+      </div>
+      <div class="Unl__Layout" >
+      <ul id="unorderedList" class="List__Layout">
+      </ul>
+      </div>
+      <div class="utilBtn">
+        <label>
+        <span  class ="clearBtn" id="clearButton">clearcompleted</span>
+      </label>
+    </div>
+</main>
   </div>
-
 
 </body>
 
