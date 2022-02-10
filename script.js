@@ -1,11 +1,13 @@
-var regx = /^([a-zA-Z]|[0-9]|[a-z0-9])+$/gi;
+var rgx = /[^\w\s]/gi;
 function newElement() {
   const itemlist = document.createElement("li");
   itemlist.className = "Li_Layout";
   itemlist.id = "ListItem";
-  let inputValue = document.getElementById("todoList").value.trim();
+  let inputValue = document
+    .getElementById("todoList")
+    .value.trim()
+    .replace(rgx, "");
   let textinput = document.createTextNode(inputValue);
-  inputValue = inputValue.replace(regx, "");
   itemlist.appendChild(textinput);
   if (inputValue === "") {
     alert("please fill the text box with letters ");

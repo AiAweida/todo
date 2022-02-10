@@ -16,12 +16,13 @@ body {
   justify-content: space-between;
   align-items: center;
   user-select: none;
-  width: 95%;
+  margin-top: 3%;
 }
 /*title*/
 .Header__Title {
   color: #ffffff;
-  letter-spacing: 16px;
+  letter-spacing: 13px;
+  margin-left: 2%;
 }
 /*them toggle for colors and images*/
 .Dark {
@@ -36,10 +37,9 @@ body {
 .Icon-Moon {
   background: url("images/icon-moon.svg") no-repeat;
   height: 26px;
-  background-repeat: no-repeat;
   width: 26px;
-  display: block;
   cursor: pointer;
+  margin-right: 3%;
 }
 .Sun {
   background: url("images/icon-sun.svg") no-repeat;
@@ -49,32 +49,31 @@ body {
   border: transparent;
 }
 .Input__Layout {
-  padding: 20px;
+  padding: 12px;
   font-size: 16px;
   outline-color: transparent;
   padding-left: 34px;
   width: 100%;
   align-self: center;
-  white-space: nowrap;
 }
 .Dark .Input__Layout {
   background-color: #25273c;
   color: white;
 }
 .List__Layout {
-  width: 90%;
+  width: 95%;
   position: absolute;
   list-style-type: none;
   padding: 0%;
 }
 /* Style the input */
 .Li_Layout {
-  padding: 26px 26px 26px 26px;
+  padding: 12px 15px;
   /* color: black;*/
   background: #ffffff;
   font-size: 18px;
   padding-left: 36px;
-  margin-bottom: 3px;
+  margin-bottom: 0.8px;
   user-select: none;
   font-family: "Josefin Sans";
 }
@@ -109,8 +108,10 @@ body {
 .Todo__Layout {
   display: flex;
   position: relative;
-  width: 90%;
+  width: 95%;
   margin-inline: auto;
+  margin-top: 15px;
+  margin-bottom: 0;
 }
 .Unl__Layout {
   display: flex;
@@ -182,15 +183,29 @@ body {
     justify-content: space-evenly;
   }
   .Todo__Layout {
-    width: 40%;
+    width: 44%;
+    margin-top: 0%;
+    margin-bottom: 0%;
   }
   .List__Layout {
-    width: 40%;
+    width: 44%;
   }
   .Delete__Btn {
     display: none;
   }
+  .Li_Layout {
+    padding: 19px 34px;
+  }
   .Li_Layout:hover .Delete__Btn {
     display: inline;
+  }
+  .Input__Layout {
+    padding: 19px 34px;
+  }
+  .Icon-Moon {
+    margin-right: 2%;
+  }
+  .Header__Title {
+    margin-left: 2%;
   }
 }
